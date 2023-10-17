@@ -12,7 +12,7 @@ class Snake:
         for x,y in self.coordinates:
             square = canvas.create_rectangle(x,y,x+SPACE_SIZE,y+SPACE_SIZE,fill=SNAKE_COLOR,tag="snake")
             self.squares.append(square)
-
+        canvas.itemconfig(self.squares[0],fill='#FFFF00')
 
 class Food:
     def __init__(self):
@@ -38,8 +38,10 @@ def next_turn(snake,food):
         x+=SPACE_SIZE
 
     snake.coordinates.insert(0,(x,y))
-    square = canvas.create_rectangle(x,y,x+SPACE_SIZE,y+SPACE_SIZE,fill=SNAKE_COLOR)
+    canvas.itemconfig(snake.squares[0],fill=SNAKE_COLOR)
+    square = canvas.create_rectangle(x,y,x+SPACE_SIZE,y+SPACE_SIZE,fill='#FFFF00')
     snake.squares.insert(0,square)
+    
 
     if x==food.coordinates[0] and y==food.coordinates[1]:
         score+=1

@@ -44,7 +44,7 @@ def next_turn(snake,food):
     if x==food.coordinates[0] and y==food.coordinates[1]:
         score+=1
         if(score==5):
-            speed=50
+            speed=170
         elif(score==20):
             speed=150
         elif(score==25):

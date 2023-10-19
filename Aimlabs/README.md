@@ -1,5 +1,5 @@
 To run this code:
-    1) Download whole folder
+    1) Download whole folder\n
     2) Set initial number of targets(NUMBER_OF_TARGETS) in the constants.py
     3) Set time (TOTAL_TIME in seconds) in the constants.py file
     4) run python main.py 
